@@ -15,6 +15,7 @@ enum ToastStyle {
   case info
   case loading
   case pending
+  case neutral
 }
 
 extension ToastStyle {
@@ -27,6 +28,7 @@ extension ToastStyle {
     case .success: return Color.green
     case .loading: return Color.gray
     case .pending: return Color.yellow
+    case .neutral: return Color.gray.opacity(0.5)
     }
   }
   
@@ -38,7 +40,7 @@ extension ToastStyle {
     case .error: return "xmark.circle.fill"
     case .loading: return "hourglass"
     case .pending: return "clock"
-
+    case .neutral: return "questionmark.circle.fill"
     }
   }
 }
