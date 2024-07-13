@@ -38,10 +38,8 @@ struct ToastView: View {
     .cornerRadius(8)
     .overlay(
       RoundedRectangle(cornerRadius: 8)
-        //.stroke(style.themeColor, lineWidth: 0.5)
         .stroke(style.themeColor, lineWidth: 1)
         .opacity(0.6)
-        //.glow(color: style.themeColor, radius: 4)
     )
     .padding(.horizontal, 16)
   }
@@ -57,6 +55,9 @@ struct FancyToastView_Previews: PreviewProvider {
             ToastView(style: .error, message: "Error message") {}
             ToastView(style: .loading, message: "Loading...") {} 
             ToastView(style: .pending, message: "Your action is pending...") {}
+            ToastView(style: .neutral, message: "This is a neutral message") {}
+
+
         }
     }
 }
@@ -78,6 +79,8 @@ struct FancyToastViewDark_Previews: PreviewProvider {
         message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
         ToastView(style: .loading, message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
         ToastView(style: .pending, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
+        ToastView(style: .neutral, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.") {}
+
     }
     .preferredColorScheme(.dark)
   }
