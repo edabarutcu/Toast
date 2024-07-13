@@ -14,7 +14,7 @@ enum ToastStyle {
   case success
   case info
   case loading
-
+  case pending
 }
 
 extension ToastStyle {
@@ -26,7 +26,7 @@ extension ToastStyle {
     case .info: return Color.blue
     case .success: return Color.green
     case .loading: return Color.gray
-
+    case .pending: return Color.yellow
     }
   }
   
@@ -37,6 +37,8 @@ extension ToastStyle {
     case .success: return "checkmark.circle.fill"
     case .error: return "xmark.circle.fill"
     case .loading: return "hourglass"
+    case .pending: return "clock"
+
     }
   }
 }

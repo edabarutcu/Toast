@@ -56,6 +56,7 @@ struct FancyToastView_Previews: PreviewProvider {
             ToastView(style: .warning, message: "Warning message") {}
             ToastView(style: .error, message: "Error message") {}
             ToastView(style: .loading, message: "Loading...") {} 
+            ToastView(style: .pending, message: "Your action is pending...") {}
         }
     }
 }
@@ -75,6 +76,8 @@ struct FancyToastViewDark_Previews: PreviewProvider {
       ToastView(
         style: .error,
         message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
+        ToastView(style: .loading, message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
+        ToastView(style: .pending, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ") {}
     }
     .preferredColorScheme(.dark)
   }
