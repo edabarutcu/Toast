@@ -48,7 +48,7 @@ struct ToastModifier: ViewModifier {
     }
   }
   
-  private func showToast() {
+  public func showToast() {
     guard let toast = toast else { return }
     
     UIImpactFeedbackGenerator(style: .light)
